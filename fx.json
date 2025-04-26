@@ -1,0 +1,51 @@
+{
+"inbounds": [{
+    "port": "10080", 
+    "listen": "127.0.0.1",
+    "tag": "socks-inbound",
+    "protocol": "socks",
+    "settings": {
+      "auth": "noauth",
+      "udp": false,
+      "ip": "127.0.0.1"
+    },
+    "sniffing": {
+      "enabled": true,
+      "destOverride": ["http", "tls"]
+    }
+  }],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [{
+        "address": "www.speedtest.net", 
+        "port": 443,
+        "users": [{"id": "80d1fe59-60f4-4272-a280-820e1ef0a754",
+		"encryption": "none"
+			}]
+      }]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "www.speedtest.net.www.1google.com.bing.com.visa.com.tls.mg3.ddns-ip.net",
+          "alpn": [
+            "http/1.1"
+          ],
+          "fingerprint": "chrome"
+        },
+        "wsSettings": {
+          "path": "/websocket",
+          "headers": {
+            "Host": "www.speedtest.net.www.1google.com.bing.com.visa.com.tls.mg3.ddns-ip.net"
+          }
+        }
+      }
+    }
+  ],
+	"other": {}
+}
