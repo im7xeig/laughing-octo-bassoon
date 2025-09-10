@@ -21,7 +21,7 @@
       "settings": {
         "vnext": [{
         "address": "www.speedtest.net", 
-        "port": 443,
+        "port": 80,
         "users": [{"id": "80d1fe59-60f4-4272-a280-820e1ef0a754",
 		"encryption": "none"
 			}]
@@ -29,7 +29,7 @@
       },
       "streamSettings": {
         "network": "ws",
-        "security": "tls",
+        "security": "none",
         "tlsSettings": {
           "allowInsecure": false,
           "serverName": "www.speedtest.net.www.1google.com.bing.com.visa.com.tls.mg3.ddns-ip.net",
@@ -48,4 +48,5 @@
     }
   ],
 	"other": {}
+
 }
