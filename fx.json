@@ -32,7 +32,7 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "test-3qo.pages.dev",
+          "serverName": "raspy-night-a34b.xrcmjb.workers.dev",
           "alpn": [
             "http/1.1"
           ],
@@ -41,7 +41,7 @@
         "wsSettings": {
           "path": "/",
           "headers": {
-            "Host": "test-3qo.pages.dev"
+            "Host": "raspy-night-a34b.xrcmjb.workers.dev"
           }
         }
       }
